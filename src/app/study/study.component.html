@@ -1,0 +1,16 @@
+      <div class="container-fluid my-4">
+
+        <app-handson-table *ngIf="studyData"
+                           [setDataSource]="studyData"
+                           [setDataRelations]="lookupDataRelations"
+                           [setCurrency]="currencyDropdown"
+                           [setVolumeUnits]="massUnitDropdown"
+                           (onRequestForChangeClicked)="requestForChange($event)"
+                           (onRequestForSignOffClicked)="requestForSignOff($event)"
+                           (onUnlockStudyClicked)="unlockStudy()"
+                           (onSaveDataClicked)="saveStudyData($event)"
+                           (dataSourceDataChanged)="processDataSourceDataGrid($event)"
+                           (onDeleteRowClicked)="onDeleteRow($event)"
+                           (onSignOffClicked)="singOffData($event)">
+        </app-handson-table>
+      </div>

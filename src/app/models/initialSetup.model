@@ -1,0 +1,41 @@
+export class InitialSetup {
+  public AnalystId?: number;
+  public CreatedBy?: number;
+  public CreatedOn?: string;
+  public Description?: string;
+  public Id?: number;
+  public IsActive?: boolean;
+  public MarketId?: number;
+  public ModifiedBy?: string;
+  public ModifiedOn?: string;
+  public Name?: string;
+  public ProjectLeadId?: number;
+  public StudyDataSetId?: number;
+  public StudyProjectId?: number;
+  public StudyYear?: number;
+  public StudyDataSetName?: string;
+  public ProjectName?: string;
+  public AnalystName?: string;
+  public ProjectLead?: string;
+  public MarketName?: string;
+  public PrefillFromId?: string;
+  public IsSignOff?: boolean;
+  public IsMidYear?: boolean;
+  public StudyAreaId?: number;
+  public StudyAreaName?: string;
+
+  public AnalystIdList?: number[];
+  public AnalystNameList?: string[];
+  public CSVAnalystIds?: string;
+  public CSVAnalystNames?: string;
+  public LockedForEditBy?: number;
+  public LockedForEditByName?: string | null;
+
+  public CalculatorId?: number;
+  public ViewId: number;
+
+  deserialize(input: any): this {
+    Object.assign(this, input);
+    return this;
+  }
+}
